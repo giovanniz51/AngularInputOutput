@@ -1,5 +1,6 @@
-<app-parent (onInput)="addedInput($event)" [passedFromApp] = "input" ></app-parent>
+<app-parent (passToAppInput)="addedInput($event)" [passedFromApp] = "input" ></app-parent>
 <hr>
 <h1>AppComponent</h1>
 <p> Passed from ParentComponent: {{ name }}</p>
-<input type="text" name="parentInput" [(ngModel)]="input"/>
+<label for="appInput">Pass to ParentComponent</label>
+<input type="text" name="appInput" [(ngModel)]="input"/>

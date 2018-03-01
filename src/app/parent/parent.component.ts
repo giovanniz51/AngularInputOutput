@@ -10,7 +10,7 @@ export class ParentComponent implements OnInit {
   
   input: string;
   @Input() passedFromApp: string;
-  @Output() onInput = new EventEmitter<string>();
+  @Output() passToAppInput = new EventEmitter<string>();
   passedFromChild: string;
 
   constructor() { }
@@ -20,8 +20,8 @@ export class ParentComponent implements OnInit {
     
   }
   
-  passInput(){
-    this.onInput.emit(this.input);
+  passInputToApp(){
+    this.passToAppInput.emit(this.input);
   }
   
   passFromChild(passedInputFromChild) {
