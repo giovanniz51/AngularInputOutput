@@ -1,0 +1,8 @@
+<h1>Parent Component</h1>
+<p>Passed from AppComponent: {{ passedFromApp }}</p>
+<label for="parentInput">Parent Input</label>
+<input type="text" name="parentInput" [(ngModel)]="input"/>
+<button (click)="passInput()">Pass to AppComponent</button>
+<p>Passed from ChildComponent to ParentComponent: {{ passedFromChild }}</p>
+<hr>
+<app-child [passedToChild] ="input" (passToParent)="passFromChild($event)"></app-child>

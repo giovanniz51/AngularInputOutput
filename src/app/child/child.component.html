@@ -1,0 +1,5 @@
+<h1>Child Component</h1>
+<label for="childInput">child Input</label>
+<input type="text" name="childInput" [(ngModel)]="input"/>
+<button (click)="onPassToParent()">Pass to ParentComponent</button>
+<p>Passed from Parent Component: {{ passedToChild }}</p>
